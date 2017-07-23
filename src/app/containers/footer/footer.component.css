@@ -1,0 +1,13 @@
+.footer-container {
+  width: 100%;
+  border-top: 1px #eeeeee solid;
+  height: 35px;
+}
+
+.footer-content {
+  margin-top: 8px;
+}
+
+.author {
+  color: #5d5d5d;
+}
