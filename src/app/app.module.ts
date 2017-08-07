@@ -10,6 +10,9 @@ import { HomeComponent } from './containers/home/home.component';
 import {routes} from './app.routes';
 import { LinksComponent } from './containers/links/links.component';
 import { FooterComponent } from './containers/footer/footer.component';
+import { BlogComponent } from './containers/blog/blog.component';
+import { ProjectsComponent } from './containers/projects/projects.component';
+import { ContactComponent } from './containers/contact/contact.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { FooterComponent } from './containers/footer/footer.component';
     NavComponent,
     HomeComponent,
     LinksComponent,
-    FooterComponent
+    FooterComponent,
+    BlogComponent,
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 .nav-container {
   border-bottom: 1px #eeeeee solid;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 .nav-container ul {
@@ -18,7 +19,8 @@
   display: inline-block;
   margin: -1px 2rem 0 0;
   color: #999;
-  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Roboto Slab",sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
   padding: 1.6rem 0 0 0;
