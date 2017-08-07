@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './containers/nav/nav.component';
-import { HomeComponent } from './containers/home/home.component';
+import { AboutComponent } from './containers/about/about.component';
 
 import {routes} from './app.routes';
 import { LinksComponent } from './containers/links/links.component';
@@ -19,7 +19,7 @@ import { ContactComponent } from './containers/contact/contact.component';
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent,
+    AboutComponent,
     LinksComponent,
     FooterComponent,
     BlogComponent,

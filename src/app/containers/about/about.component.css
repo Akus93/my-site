@@ -1,0 +1,79 @@
+:host {
+  text-align: justify;
+}
+
+.personal-info {
+  display: inline-block;
+  width: 30%;
+  float: left;
+  padding: 10px;
+
+  /*border: 1px red solid;*/
+  box-sizing: border-box;
+}
+
+.about-me {
+  display: inline-block;
+  width: 70%;
+  padding: 10px;
+
+  /*border: 1px blue solid;*/
+  box-sizing: border-box;
+}
+
+.personal-info-image {
+  display: block;
+  height: 150px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 1px solid #dedede;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 4px 12px #999;
+}
+
+.personal-info-header {
+  letter-spacing: 1.2px;
+  color: #575757;
+  font-weight: bolder;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.heading-line {
+  height: 3px;
+  width: 76%;
+  background-color: #575757;
+  margin-bottom: 10px;
+  display: inline-block;
+  position: relative;
+  left: 12%;
+}
+
+.personal-info-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.personal-info-content span {
+  margin: 5px 0 10px;
+  text-transform: uppercase;
+}
+
+.about-me-title {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  border-bottom: 2px #5d5d5d solid;
+  display: inline-block;
+  margin: 0 0 6px 0;
+}
+
+.about-me-subtitle {
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
