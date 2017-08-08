@@ -12,6 +12,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent, data: { state: 'contact' }},
   { path: 'projects', component: ProjectsComponent, data: { state: 'projects' }},
   { path: 'links', component: LinksComponent, data: { state: 'links' }},
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
   { path: '', redirectTo: '/about', pathMatch: 'full'},
   { path: '**', redirectTo: '/about', pathMatch: 'full' }
 ];

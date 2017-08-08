@@ -1,0 +1,38 @@
+.contact-form-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  vertical-align: middle;
+  justify-content: space-between;
+}
+
+.contact-form textarea, input {
+  width: 100%;
+  background-color: transparent;
+  outline-color: rgb(239,239,239);
+  outline: solid 1px;
+  outline-color: currentcolor;
+  padding: 10px;
+  font-weight: 700;
+  border: 1px solid currentcolor;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 200px;
+  font-size: 1rem;
+}
+
+.contact-form input {
+  width:49%;
+}
+
+.contact-form-submit {
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid currentcolor;
+  background-color: transparent;
+}
