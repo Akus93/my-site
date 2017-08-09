@@ -31,3 +31,7 @@ a:focus {
 .router-container {
   padding: 10px 12px;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

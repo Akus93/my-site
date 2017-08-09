@@ -8,7 +8,7 @@ import { NavComponent } from './containers/nav/nav.component';
 import { AboutComponent } from './containers/about/about.component';
 
 import {routes} from './app.routes';
-import { LinksComponent } from './containers/links/links.component';
+import { HistoryComponent } from './containers/history/history.component';
 import { FooterComponent } from './containers/footer/footer.component';
 import { BlogComponent } from './containers/blog/blog.component';
 import { ProjectsComponent } from './containers/projects/projects.component';
@@ -20,7 +20,7 @@ import { ContactComponent } from './containers/contact/contact.component';
     AppComponent,
     NavComponent,
     AboutComponent,
-    LinksComponent,
+    HistoryComponent,
     FooterComponent,
     BlogComponent,
     ProjectsComponent,

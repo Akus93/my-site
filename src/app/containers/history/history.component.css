@@ -1,0 +1,84 @@
+.timeline {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.timeline ul {
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 4px;
+  margin: 0 auto;
+  padding-top: 30px;
+  background: #6f6f6f;
+}
+
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 250px;
+  padding: 12px 18px;
+  background: #0094FF;
+  border-radius: 25px;
+}
+
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 12px 16px 12px 0;
+  border-color: transparent #0094FF transparent transparent;
+  top: 50%;
+  transform: translateY(-25%);
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -325px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 12px 0 12px 16px;
+  border-color: transparent transparent transparent #0094FF;
+  top: 50%;
+  transform: translateY(-25%);
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+.timeline ul li::after {
+  transition: background .5s ease-in-out;
+  background: #0094FF;
+  top: 50%;
+}
