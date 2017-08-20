@@ -35,3 +35,7 @@ a:focus {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.ql-container {
+  min-height: 300px;
+}

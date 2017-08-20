@@ -1,31 +1,12 @@
 <div class="router-container">
 
-  <article id="post-1" class="post">
+  <article *ngFor="let post of (posts$ | async)" class="post">
     <header>
-      <h2>9 Maj, 2017</h2>
-      <h1><a>Testowy wpis</a></h1>
+      <h2>{{post.create_date |date:'d MMMM, y'}}</h2>
+      <h1><a [routerLink]="['/post', post.slug]">{{post.title}}</a></h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed mauris ante.
-        Vivamus sed purus dignissim, lacinia erat vitae, lobortis felis. Curabitur sit amet mauris
-        sit amet metus scelerisque viverra id eu augue. Integer at interdum eros, vitae mollis tellus.
-        In tincidunt ex vitae condimentum cursus. Pellentesque iaculis diam auctor tortor bibendum mattis.
-        <a>Czytaj wiecej</a>
-      </p>
-    </header>
-  </article>
-
-  <article id="post-2" class="post">
-    <header>
-      <h2>15 Maj, 2017</h2>
-      <h1><a>Testowy wpis 2</a></h1>
-      <p>
-        Sed molestie convallis felis, eu pellentesque orci posuere at. Aenean id commodo nunc.
-        Donec vulputate diam tristique, eleifend ipsum at, rhoncus metus. Maecenas nisl nulla,
-        venenatis vitae pulvinar sit amet, efficitur vitae ex. In iaculis vulputate enim,
-        ut condimentum nisi hendrerit sed. Aenean sed tellus vitae ante dapibus sodales sed id leo.
-        Integer vitae iaculis lectus. Etiam aliquet libero sed risus ullamcorper mattis.
-        Sed sed neque nec nunc rutrum auctor.
-        <a>Czytaj wiecej</a>
+        {{post.description}}
+        <a [routerLink]="['/post', post.slug]">Czytaj wiecej</a>
       </p>
     </header>
   </article>
