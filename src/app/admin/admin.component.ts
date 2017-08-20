@@ -24,11 +24,12 @@ export class AdminComponent implements OnInit, OnDestroy {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-      [{ 'script': 'sub'}, { 'script': 'super' }],
-      [{ 'header': [1, 2, 3, false] }],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'list': 'ordered' }, { 'list': 'bullet' }, {'align': [false, 'center', 'right', 'justify']}],
+      [{ 'script': 'sub' }, { 'script': 'super' }],
+      [{ 'header': [1, 2, 3, false] }, {'font': []}],
       ['clean'],
-      ['link', 'image', 'video']
+      ['link', 'image', 'video'],
     ]
   };
 
