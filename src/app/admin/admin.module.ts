@@ -8,6 +8,8 @@ import { routes } from './admin.routes';
 import { LoginComponent } from './containers/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth/auth.service';
+import { PostCreateComponent } from './containers/post-create/post-create.component';
+import { PostEditComponent } from './containers/post-edit/post-edit.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AuthService } from './services/auth/auth.service';
   ],
   declarations: [
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    PostCreateComponent,
+    PostEditComponent,
   ],
   providers: [
     AuthGuard,

@@ -1,0 +1,16 @@
+<div class="router-container">
+  <div class="header">
+    <a class="back-link" routerLink="/admin">&#8592; <span>Wróć</span></a>
+    <h2 class="title">Dodaj wpis</h2>
+  </div>
+
+  <div class="title-input-container">
+    <input #title placeholder="Tytuł" >
+  </div>
+
+  <div class="editor-input-container">
+    <quill-editor #editor [modules]="editorConfig"></quill-editor>
+  </div>
+
+  <button class="publish-button" (click)="publish()">Publikuj</button>
+</div>

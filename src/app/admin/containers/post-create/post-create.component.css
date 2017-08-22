@@ -1,0 +1,44 @@
+.back-link {
+  font-size: 1.5rem;
+  color: inherit;
+  position: absolute;
+}
+
+.back-link span {
+  font-size: 1.2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.title-input-container {
+  width: 100%;
+}
+
+.title-input-container input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #c0c0c0;
+  background-color: #fbfbfb;
+}
+
+.title-input-container input:focus {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.editor-input-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.publish-button {
+  float: right;
+  border: 1px solid #c0c0c0;
+  padding: 8px 20px;
+  background-color: transparent;
+}
+
+.publish-button:hover {
+  border-color: #a6a6a6;
+}
