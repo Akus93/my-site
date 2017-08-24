@@ -1,14 +1,22 @@
-<div id="wrapper">
-  <header>
-    <!--<img class="logo" src="assets/images/logo.png" alt="Dawid Rdzanek"/>-->
-    <nav class="containter">
-      <app-nav></app-nav>
-    </nav>
-  </header>
-  <main class="containter" [@routerTransition]="getState(o)">
-    <router-outlet #o="outlet"></router-outlet>
-  </main>
+<!--<div id="wrapper">-->
+<header>
+  <!--<img class="logo" src="assets/images/logo.png" alt="Dawid Rdzanek"/>-->
+  <nav class="containter">
+    <app-nav></app-nav>
+  </nav>
+</header>
+<main class="containter" [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
+</main>
+<div class="social-container">
+  <a class="social-link" href="https://github.com/Akus93" target="_blank">
+    <img src="assets/images/github-icon.png"/>
+  </a>
+  <a class="social-link" href="https://www.linkedin.com/in/dawidrdzanek" target="_blank">
+    <img src="assets/images/linkedin-icon.png"/>
+  </a>
 </div>
+<!--</div>-->
 <!--<footer class="containter">-->
   <!--<app-footer></app-footer>-->
 <!--</footer>-->

@@ -64,13 +64,15 @@ export class PostCreateComponent implements OnInit, OnDestroy {
         error => console.error(error));
   }
 
-  private generateDescription(text: string, maxChars: number = 510): string {
+  private generateDescription(text: string, maxChars: number = 500): string {
     let counter = 0;
     let index = 0;
     const sentences = text.split('.');
     for (let i = 0; i < sentences.length; ++i) {
       counter += sentences[i].length;
-      if (counter > maxChars) { break; }
+      if (counter > maxChars) {
+        break;
+      }
       index++;
     }
     return sentences.slice(0, index).join('.') + '.';

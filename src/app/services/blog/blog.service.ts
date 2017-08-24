@@ -43,6 +43,19 @@ export class BlogService {
     return this.http.post(`${this.origin}/posts/`, body, options);
   }
 
+  public editPost(token: string, slug: string, title: string, content: string, description: string) {
+    const body = {
+      title: title,
+      content: content,
+      description: description
+    };
+    const options = {
+      headers: new HttpHeaders().set('Authorization', 'Token ' + token)
+    };
+
+    return this.http.patch(`${this.origin}/posts/${slug}/`, body, options);
+  }
+
   private fetchPost(slug: string): Observable<PostDetail> {
     const subject = new AsyncSubject<PostDetail>();
     this.http

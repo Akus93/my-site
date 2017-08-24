@@ -19,4 +19,22 @@
   box-sizing: border-box;
 }
 
+.social-container {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
 
+.social-link img {
+  width: 25px;
+  height: 25px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.social-link img:hover {
+  border-color: #666;
+}

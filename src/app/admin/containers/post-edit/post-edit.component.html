@@ -3,5 +3,13 @@
     <a class="back-link" routerLink="/admin">&#8592; <span>Wróć</span></a>
     <h2 class="title">Edytuj wpis</h2>
   </div>
-  <p>{{post?.title}}</p>
+  <div class="title-input-container">
+    <input #title placeholder="Tytuł" value="{{post?.title}}">
+  </div>
+
+  <div class="editor-input-container">
+    <quill-editor #editor [modules]="editorConfig"></quill-editor>
+  </div>
+
+  <button class="edit-button" (click)="edit()">Edytuj</button>
 </div>
