@@ -17,6 +17,7 @@ import { ContactComponent } from './containers/contact/contact.component';
 import { PostComponent } from './containers/post/post.component';
 import { BlogService } from './services/blog/blog.service';
 import { SocialComponent } from './components/social/social.component';
+import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SocialComponent } from './components/social/social.component';
     ProjectsComponent,
     ContactComponent,
     PostComponent,
-    SocialComponent
+    SocialComponent,
+    SkillBarComponent
   ],
   imports: [
     BrowserModule,

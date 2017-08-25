@@ -60,7 +60,7 @@ export class PostCreateComponent implements OnInit, OnDestroy {
     const description = this.generateDescription(this.editorText);
     const token = this.authService.getToken();
     this.blogService.addPost(token, title, content, description)
-      .subscribe(post => console.log(post),
+      .subscribe(post => this.onSuccess(),
         error => console.error(error));
   }
 
@@ -76,6 +76,11 @@ export class PostCreateComponent implements OnInit, OnDestroy {
       index++;
     }
     return sentences.slice(0, index).join('.') + '.';
+  }
+
+  private onSuccess(): void {
+    this.title.nativeElement.value = '';
+    this.editor.writeValue('');
   }
 
 }

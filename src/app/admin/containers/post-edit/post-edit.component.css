@@ -11,3 +11,35 @@
 .title {
   text-align: center;
 }
+
+.title-input-container {
+  width: 100%;
+}
+
+.title-input-container input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #c0c0c0;
+  background-color: #fbfbfb;
+}
+
+.title-input-container input:focus {
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.editor-input-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.edit-button {
+  float: right;
+  border: 1px solid #c0c0c0;
+  padding: 8px 20px;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.edit-button:hover {
+  border-color: #a6a6a6;
+}

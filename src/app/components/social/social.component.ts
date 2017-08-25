@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
-  styleUrls: ['./social.component.css']
+  styleUrls: ['./social.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SocialComponent implements OnInit {
+export class SocialComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
