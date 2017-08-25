@@ -43,3 +43,16 @@ button::-moz-focus-inner {
 .ql-container {
   min-height: 300px;
 }
+
+.social-wrapper-inside {
+  display: none;
+}
+
+@media screen and (max-width: 1199px) {
+  .social-wrapper-inside {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 20px;
+  }
+}

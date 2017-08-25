@@ -16,6 +16,7 @@ import { ProjectsComponent } from './containers/projects/projects.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { PostComponent } from './containers/post/post.component';
 import { BlogService } from './services/blog/blog.service';
+import { SocialComponent } from './components/social/social.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BlogService } from './services/blog/blog.service';
     BlogComponent,
     ProjectsComponent,
     ContactComponent,
-    PostComponent
+    PostComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,
