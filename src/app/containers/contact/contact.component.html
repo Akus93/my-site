@@ -5,7 +5,7 @@
         <input placeholder="Adres email">
       </div>
       <div class="contact-form-row">
-        <textarea placeholder="Treść wiadomości"></textarea>
+        <textarea #content (input)="onTextareaInput()" placeholder="Treść wiadomości"></textarea>
       </div>
       <div class="contact-form-row">
         <button class="contact-form-submit">Wyślij</button>

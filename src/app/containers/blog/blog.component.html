@@ -1,4 +1,5 @@
 <div class="router-container">
+  <app-loader *ngIf="!(posts$ | async)"></app-loader>
 
   <article *ngFor="let post of (posts$ | async)" class="post">
     <header>

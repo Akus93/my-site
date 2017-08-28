@@ -21,7 +21,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "assets/css/quill.snow.min.css"
+        "assets/css/quill.snow.min.css",
+        "assets/css/normalize.min.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -14,7 +14,9 @@ export class BlogComponent implements OnInit {
 
   public posts$: Observable<PostListItem[]>;
 
-  constructor(private blogService: BlogService) { }
+  public isLoader = true;
+
+  constructor(private blogService: BlogService) {}
 
   ngOnInit() {
     this.posts$ = this.blogService.getPosts();

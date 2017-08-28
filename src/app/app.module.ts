@@ -18,6 +18,7 @@ import { PostComponent } from './containers/post/post.component';
 import { BlogService } from './services/blog/blog.service';
 import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
     ContactComponent,
     PostComponent,
     SocialComponent,
-    SkillBarComponent
+    SkillBarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

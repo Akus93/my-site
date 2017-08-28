@@ -14,18 +14,22 @@
 .contact-form textarea, input {
   width: 100%;
   background-color: transparent;
-  outline-color: rgb(239,239,239);
-  outline: solid 1px;
-  outline-color: currentcolor;
   padding: 10px;
-  font-weight: 700;
-  border: 1px solid currentcolor;
+  font-weight: 600;
+  border: 0;
+  border-bottom: 1px solid currentcolor;
   box-sizing: border-box;
 }
 
+.contact-form textarea:focus, input:focus {
+  box-shadow: 0 1px 0 0 rgba(93, 93, 93, 0.5);
+}
+
 .contact-form textarea {
-  height: 200px;
+  height: 38px;
+  margin-top: 10px;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 .contact-form input {
@@ -33,10 +37,16 @@
 }
 
 .contact-form-submit {
+  margin-left:auto;
   height: 40px;
   width: 100px;
   font-weight: bold;
   cursor: pointer;
-  border: 2px solid currentcolor;
+  border: 1px solid currentcolor;
+  /*outline: rgba(150, 150, 150, 0.5) solid 1px;*/
   background-color: transparent;
+}
+
+.contact-form-submit:hover {
+  outline: rgba(150, 150, 150, 0.5) solid 1px;
 }
