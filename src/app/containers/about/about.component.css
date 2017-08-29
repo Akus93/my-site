@@ -86,3 +86,20 @@
   margin: 0 auto;
   text-transform: uppercase;
 }
+
+.skill-box {
+  /*display: inline-block;*/
+  width: 150px;
+  margin-top: 10px;
+}
+
+#frameworks,
+#languages {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+#frameworks {
+  float: right;
+}
