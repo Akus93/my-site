@@ -38,12 +38,12 @@
 
 .contact-form-submit {
   margin-left:auto;
+  margin-top: 16px;
   height: 40px;
   width: 100px;
-  font-weight: bold;
+  font-weight: 500;
   cursor: pointer;
   border: 1px solid currentcolor;
-  /*outline: rgba(150, 150, 150, 0.5) solid 1px;*/
   background-color: transparent;
 }
 

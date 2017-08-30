@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "robots.txt"
+        "robots.txt",
+        "dawid-rdzanek-resume.pdf"
       ],
       "index": "index.html",
       "main": "main.ts",
