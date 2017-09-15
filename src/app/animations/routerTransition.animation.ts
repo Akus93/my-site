@@ -15,8 +15,8 @@ export const routerTransition = trigger('routerTransition', [
         animate('0.3s', style({opacity: 0}))
       ], { optional: true }),
     ]),
-    query(':enter .timeline ul li', stagger(400, [
-      animate('.5s',
+    query(':enter .timeline ul li', stagger(100, [
+      animate('.7s',
         style({  height: '*', opacity: 1 })),
     ]))
   ]),

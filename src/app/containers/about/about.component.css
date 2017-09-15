@@ -88,18 +88,255 @@
 }
 
 .skill-box {
-  /*display: inline-block;*/
   width: 150px;
   margin-top: 10px;
 }
 
-#frameworks,
-#languages {
+.experience-box {
+  width: 100%;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #f4f4f4;
+  float: left;
+}
+
+.experience-box > div {
   display: inline-block;
-  width: 50%;
   box-sizing: border-box;
 }
 
-#frameworks {
+.experience-info {
+  width: 65%;
   float: right;
+}
+
+.experience-info ul li {
+  line-height: 1.5em;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.experience-info ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.experience-title {
+  width: 35%;
+}
+
+.experience-title-name {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.experience-title-time {
+  font-style: italic;
+  color: #888;
+}
+
+@media (max-width:800px) {
+  .experience-info,
+  .experience-title {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+
+  .experience-info {
+    padding-top: 10px;
+  }
+
+  .experience-title-name,
+  .experience-title-time {
+    text-align: center;
+  }
+}
+
+/*.skills img {*/
+  /*width: 64px;*/
+/*}*/
+
+/*.skills {*/
+  /*list-style: none;*/
+  /*overflow: hidden;*/
+  /*padding: 0;*/
+/*}*/
+
+/*.skills li {*/
+  /*float: left;*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*width: 50%;*/
+  /*text-align: center;*/
+  /*border: 1px dotted #ddd;*/
+  /*border-right: none;*/
+  /*border-bottom: none;*/
+  /*box-sizing: border-box;*/
+/*}*/
+
+/*.skills li:nth-of-type(1),*/
+/*.skills li:nth-of-type(2) {*/
+  /*border-top: none;*/
+/*}*/
+
+/*.skills li:nth-of-type(2n+1) {*/
+  /*border-left: none;*/
+/*}*/
+
+/*@media screen and (min-width: 46.25em) {*/
+  /*.skills li {*/
+    /*width: 25%;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(1),*/
+  /*.skills li:nth-of-type(2),*/
+  /*.skills li:nth-of-type(3),*/
+  /*.skills li:nth-of-type(4) {*/
+    /*border-top: none;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(2n+1) {*/
+    /*border-left: 1px dotted #ddd;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(4n+1) {*/
+    /*border-left: none;*/
+  /*}*/
+/*}*/
+
+/*@media screen and (min-width: 62.5em) {*/
+  /*.skills li {*/
+    /*width: 20%;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(1),*/
+  /*.skills li:nth-of-type(2),*/
+  /*.skills li:nth-of-type(3),*/
+  /*.skills li:nth-of-type(4),*/
+  /*.skills li:nth-of-type(5) {*/
+    /*border-top: none;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(4n+1) {*/
+    /*border-left: 1px dotted #ddd;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(5n+1) {*/
+    /*border-left: none;*/
+  /*}*/
+/*}*/
+
+/*.skills a {*/
+  /*margin: 1rem;*/
+  /*display: block;*/
+/*}*/
+
+/*@media screen and (min-width: 46.25em) {*/
+  /*.skills a {*/
+    /*opacity: 0.5;*/
+    /*-webkit-filter: grayscale(1);*/
+    /*filter: grayscale(1);*/
+  /*}*/
+/*}*/
+
+/*.skills a:hover {*/
+  /*opacity: 1;*/
+  /*filter: grayscale(0);*/
+/*}*/
+
+/*!*.skills.is-case-study li {*!*/
+  /*!*border-width: 0;*!*/
+/*!*}*!*/
+
+.skills img {
+  width: 64px;
+}
+
+.skills {
+  list-style: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+.skills li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  text-align: center;
+  border: 1px dotted #ddd;
+  border-right: none;
+  border-bottom: none;
+  box-sizing: border-box;
+}
+
+.skills li:nth-of-type(1),
+.skills li:nth-of-type(2) {
+  border-top: none;
+}
+
+.skills li:nth-of-type(2n+1) {
+  border-left: none;
+}
+
+/*@media screen and (min-width: 46.25em) {*/
+  .skills li {
+    width: 25%;
+  }
+
+  .skills li:nth-of-type(1),
+  .skills li:nth-of-type(2),
+  .skills li:nth-of-type(3),
+  .skills li:nth-of-type(4) {
+    border-top: none;
+  }
+
+  .skills li:nth-of-type(2n+1) {
+    border-left: 1px dotted #ddd;
+  }
+
+  .skills li:nth-of-type(4n+1) {
+    border-left: none;
+  }
+/*}*/
+
+/*@media screen and (min-width: 62.5em) {*/
+  /*.skills li {*/
+    /*width: 20%;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(1),*/
+  /*.skills li:nth-of-type(2),*/
+  /*.skills li:nth-of-type(3),*/
+  /*.skills li:nth-of-type(4),*/
+  /*.skills li:nth-of-type(5) {*/
+    /*border-top: none;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(4n+1) {*/
+    /*border-left: 1px dotted #ddd;*/
+  /*}*/
+
+  /*.skills li:nth-of-type(5n+1) {*/
+    /*border-left: none;*/
+  /*}*/
+/*}*/
+
+.skills a {
+  margin: 1rem;
+  display: block;
+}
+
+/*@media screen and (min-width: 46.25em) {*/
+  .skills a {
+    opacity: 0.5;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+/*}*/
+
+.skills a:hover {
+  opacity: 1;
+  filter: grayscale(0);
 }
