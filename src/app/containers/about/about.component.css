@@ -265,3 +265,11 @@
     filter: grayscale(0);
   }
 }
+
+.cv-info {
+  width: 100%;
+  text-align: right;
+  font-size: 0.8em;
+  color: #cdcdcd;
+  font-style: italic;
+}
