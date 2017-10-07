@@ -50,3 +50,8 @@
 .contact-form-submit:hover {
   outline: rgba(150, 150, 150, 0.5) solid 1px;
 }
+
+.contact-form-submit:disabled:hover {
+  outline: 0;
+}
+

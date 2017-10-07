@@ -3,6 +3,7 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { routes } from './app.routes';
 
@@ -19,6 +20,7 @@ import { BlogService } from './services/blog/blog.service';
 import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { MessageService } from './services/message/message.service';
 
 
 @NgModule({
@@ -38,13 +40,15 @@ import { LoaderComponent } from './components/loader/loader.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pl-PL' },
-    BlogService
+    BlogService,
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
