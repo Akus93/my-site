@@ -1,4 +1,4 @@
-import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
@@ -10,7 +10,5 @@ import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 export class SkillBarComponent {
 
   @Input() value: number;
-
-  constructor() { }
 
 }
