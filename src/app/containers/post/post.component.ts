@@ -4,8 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ISubscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/switchMap';
 
-import {BlogService} from '../../services/blog/blog.service';
-import {PostDetail} from '../../models/post.model';
+import { BlogService } from '../../services/blog/blog.service';
+import { PostDetail } from '../../models/post.model';
 
 
 @Component({
@@ -16,8 +16,8 @@ import {PostDetail} from '../../models/post.model';
 export class PostComponent implements OnInit, OnDestroy {
 
   public post: PostDetail;
-  private postSubscription: ISubscription;
   public content: SafeHtml;
+  private postSubscription: ISubscription;
 
   constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer,
               private blogService: BlogService) { }
@@ -34,10 +34,6 @@ export class PostComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.postSubscription.unsubscribe();
-  }
-
-  log() {
-    console.log(this.post);
   }
 
 }

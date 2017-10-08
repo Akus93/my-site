@@ -92,7 +92,8 @@
   margin-top: 10px;
 }
 
-.experience-box {
+.experience-box,
+.education-box {
   width: 100%;
   padding-bottom: 16px;
   margin-bottom: 16px;
@@ -105,7 +106,8 @@
   box-sizing: border-box;
 }
 
-.experience-info {
+.experience-info,
+.education-info {
   width: 65%;
   float: right;
 }
@@ -121,7 +123,8 @@
   margin: 0;
 }
 
-.experience-title {
+.experience-title,
+.education-time {
   width: 35%;
 }
 
@@ -135,9 +138,28 @@
   color: #888;
 }
 
+.education-time,
+.education-info {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.education-time time {
+  font-style: italic;
+  color: #888;
+}
+
+.education-info {
+  line-height: 1.5em;
+  font-size: 1.1em;
+  text-align: left;
+}
+
 @media (max-width:800px) {
   .experience-info,
-  .experience-title {
+  .experience-title,
+  .education-info,
+  .education-time {
     display: block;
     width: 100%;
     float: none;
@@ -148,7 +170,8 @@
   }
 
   .experience-title-name,
-  .experience-title-time {
+  .experience-title-time,
+  .education-time {
     text-align: center;
   }
 }
@@ -273,3 +296,4 @@
   color: #cdcdcd;
   font-style: italic;
 }
+
