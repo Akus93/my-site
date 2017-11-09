@@ -1,10 +1,10 @@
-import { MySitePage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('my-site App', () => {
-  let page: MySitePage;
+describe('delete-app App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new MySitePage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
