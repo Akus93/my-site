@@ -18,7 +18,7 @@ export class ContactComponent {
     content: ''
   };
 
-  constructor(private renderer: Renderer2, private messageService: MessageService) { }
+  constructor(private renderer: Renderer2, private messageService: MessageService) {}
 
   public onTextareaInput() {
     const scrollHeight = this.content.nativeElement.scrollHeight;
@@ -28,10 +28,10 @@ export class ContactComponent {
   public send() {
     this.messageService.sendMessage(this.formData.name, this.formData.email, this.formData.content).subscribe(
       response => {
-          this.formData.content = '';
-          this.formData.name = '';
-          this.formData.email = '';
-        },
+        this.formData.content = '';
+        this.formData.name = '';
+        this.formData.email = '';
+      },
       error => console.error(error)
     );
   }

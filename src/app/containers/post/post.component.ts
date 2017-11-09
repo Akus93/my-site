@@ -19,17 +19,16 @@ export class PostComponent implements OnInit, OnDestroy {
   public content: SafeHtml;
   private postSubscription: ISubscription;
 
-  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer,
-              private blogService: BlogService) { }
+  constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer, private blogService: BlogService) {}
 
   ngOnInit() {
     this.postSubscription =
       this.route.params
-                .switchMap(params => this.blogService.getPost(params['slug']))
-                .subscribe(post => {
-                  this.content = this.sanitizer.bypassSecurityTrustHtml(post.content);
-                  this.post = post;
-                });
+        .switchMap(params => this.blogService.getPost(params['slug']))
+        .subscribe(post => {
+          this.content = this.sanitizer.bypassSecurityTrustHtml(post.content);
+          this.post = post;
+        });
   }
 
   ngOnDestroy() {

@@ -1,18 +1,18 @@
 <div class="router-container">
-    <form class="contact-form" (ngSubmit)="send()" #contactForm="ngForm">
-      <div class="contact-form-row">
-        <input [(ngModel)]="formData.name" name="name" required placeholder="Imię i nazwisko">
-        <input [(ngModel)]="formData.email" name="email" type="email" required placeholder="Adres email">
-      </div>
-      <div class="contact-form-row">
+  <form class="contact-form" (ngSubmit)="send()" #contactForm="ngForm">
+    <div class="contact-form-row">
+      <input [(ngModel)]="formData.name" name="name" required placeholder="Imię i nazwisko">
+      <input [(ngModel)]="formData.email" name="email" type="email" required placeholder="Adres email">
+    </div>
+    <div class="contact-form-row">
         <textarea [(ngModel)]="formData.content" name="content" required
                   #content (input)="onTextareaInput()" placeholder="Treść wiadomości">
         </textarea>
-      </div>
-      <div class="contact-form-row">
-        <button type="submit" class="contact-form-submit" [disabled]="!contactForm.form.valid">Wyślij</button>
-      </div>
-    </form>
+    </div>
+    <div class="contact-form-row">
+      <button type="submit" class="contact-form-submit" [disabled]="!contactForm.form.valid">Wyślij</button>
+    </div>
+  </form>
 
   <div class="social-wrapper-inside">
     <app-social></app-social>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from '../../services/blog/blog.service';
 import { Observable } from 'rxjs/Observable';
 
-import {PostListItem} from '../../models/post.model';
+import { BlogService } from '../../services/blog/blog.service';
+import { PostListItem } from '../../models/post.model';
 
 
 @Component({
@@ -13,8 +13,6 @@ import {PostListItem} from '../../models/post.model';
 export class BlogComponent implements OnInit {
 
   public posts$: Observable<PostListItem[]>;
-
-  public isLoader = true;
 
   constructor(private blogService: BlogService) {}
 
