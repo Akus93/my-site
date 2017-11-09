@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { registerLocaleData } from '@angular/common';
+import localePl from '@angular/common/locales/pl';
 
 import { routes } from './app.routes';
 
@@ -22,6 +24,7 @@ import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { MessageService } from './services/message/message.service';
 
+registerLocaleData(localePl);
 
 @NgModule({
   declarations: [
@@ -46,7 +49,6 @@ import { MessageService } from './services/message/message.service';
     RouterModule.forRoot(routes)
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'pl-PL' },
     BlogService,
     MessageService
   ],
