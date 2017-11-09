@@ -1,5 +1,11 @@
-<h2>Zaloguj się</h2>
-
-<input #login placeholder="Login">
-<input #password type="password" placeholder="Hasło">
-<button (click)="onSumbit()">Zaloguj się</button>
+<div class="router-container">
+  <div class="login-container">
+    <div class="login-form">
+      <input #login placeholder="Login">
+      <input #password type="password" placeholder="Hasło">
+      <div class="sumbit-wrapper">
+        <button (click)="onSumbit()">Zaloguj się</button>
+      </div>
+    </div>
+  </div>
+</div>
