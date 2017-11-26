@@ -33,6 +33,7 @@
 .personal-info-image {
   display: block;
   height: 150px;
+  width: 150px;
   margin: 10px auto;
   border-radius: 50%;
   border: 1px solid #dedede;
