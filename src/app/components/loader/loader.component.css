@@ -12,8 +12,9 @@
 
 .loader {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .loader span {
@@ -38,4 +39,11 @@
 
 .loader span:nth-child(5) {
   animation-delay: .8s;
+}
+
+.long-load-msg {
+  font-size: 0.8em;
+  color: #999;
+  position: absolute;
+  margin-top: 60px;
 }
