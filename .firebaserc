@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "my-site-c754c"
+    "default": "my-site-c754c",
+    "my-site": "my-site-c754c"
   }
 }
