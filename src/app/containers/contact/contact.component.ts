@@ -26,8 +26,8 @@ export class ContactComponent {
   }
 
   public send() {
-    this.messageService.sendMessage(this.formData.name, this.formData.email, this.formData.content).subscribe(
-      response => {
+    this.messageService.sendMessage(this.formData.name, this.formData.email, this.formData.content)
+      .subscribe(response => {
         this.formData.content = '';
         this.formData.name = '';
         this.formData.email = '';

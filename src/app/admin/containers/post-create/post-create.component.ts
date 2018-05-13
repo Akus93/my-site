@@ -1,11 +1,11 @@
-import {Component, OnInit, OnDestroy, ViewChild, ElementRef} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 
-import {QuillEditorComponent} from 'ngx-quill/src/quill-editor.component';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import {ISubscription} from 'rxjs/Subscription';
-import {BlogService} from '../../../services/blog/blog.service';
-import {AuthService} from '../../services/auth/auth.service';
+import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
+import { SubscriptionLike  } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+
+import { BlogService } from '../../../services/blog/blog.service';
+import { AuthService } from '../../services/auth/auth.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class PostCreateComponent implements OnInit, OnDestroy {
   @ViewChild('title') title: ElementRef;
   public editorHtml: string;
   public editorText: string;
-  public editorSubscription: ISubscription;
+  public editorSubscription: SubscriptionLike;
   public editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
@@ -41,8 +41,10 @@ export class PostCreateComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.editorSubscription = this.editor
       .onContentChanged
-      .debounceTime(400)
-      .distinctUntilChanged()
+      .pipe(
+        debounceTime(400),
+        distinctUntilChanged()
+      )
       .subscribe(content => {
           this.editorHtml = content.html;
           this.editorText = content.text;

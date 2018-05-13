@@ -1,10 +1,13 @@
-import {Component, OnInit, OnDestroy, ViewChild, ElementRef} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { SubscriptionLike } from 'rxjs';
+import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
+import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+
+import { AuthService } from '../../services/auth/auth.service';
 import { BlogService } from '../../../services/blog/blog.service';
 import { PostDetail} from '../../../models/post.model';
-import { ISubscription } from 'rxjs/Subscription';
-import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
-import {AuthService} from '../../services/auth/auth.service';
 
 
 @Component({
@@ -16,11 +19,11 @@ export class PostEditComponent implements OnInit, OnDestroy {
 
   @ViewChild('editor') editor: QuillEditorComponent;
   public post: PostDetail;
-  private postSubscription: ISubscription;
+  private postSubscription: SubscriptionLike;
   @ViewChild('title') title: ElementRef;
   public editorHtml: string;
   public editorText: string;
-  public editorSubscription: ISubscription;
+  public editorSubscription: SubscriptionLike;
   public editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
@@ -40,15 +43,19 @@ export class PostEditComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.postSubscription =
       this.route.params
-        .switchMap(params => this.blogService.getPost(params['slug']))
+        .pipe(
+          switchMap(params => this.blogService.getPost(params['slug']))
+        )
         .subscribe(post => {
           this.post = post;
           this.editor.writeValue(post.content);
         });
     this.editorSubscription = this.editor
       .onContentChanged
-      .debounceTime(400)
-      .distinctUntilChanged()
+      .pipe(
+        debounceTime(400),
+        distinctUntilChanged()
+      )
       .subscribe(content => {
           this.editorHtml = content.html;
           this.editorText = content.text;

@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-import { AsyncSubject } from 'rxjs/AsyncSubject';
-import 'rxjs/add/operator/retry';
+import { Observable, AsyncSubject } from 'rxjs';
+import { retry } from 'rxjs/operators';
 
 import { PostDetail, PostListItem } from '../../models/post.model';
 
@@ -61,7 +60,9 @@ export class BlogService {
     const subject = new AsyncSubject<PostDetail>();
     this.http
         .get<PostDetail>(`${this.origin}/posts/${slug}/`)
-        .retry(3)
+        .pipe(
+          retry(3)
+        )
         .subscribe(subject);
     return subject.asObservable();
   }
@@ -70,7 +71,9 @@ export class BlogService {
     const subject = new AsyncSubject<PostListItem[]>();
     this.http
       .get<PostListItem[]>(`${this.origin}/posts/`)
-      .retry(3)
+      .pipe(
+        retry(3)
+      )
       .subscribe(subject);
     return subject.asObservable();
   }

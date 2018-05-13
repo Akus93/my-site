@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { BlogService } from '../services/blog/blog.service';
-import {PostListItem} from '../models/post.model';
+import { PostListItem } from '../models/post.model';
 
 
 @Component({

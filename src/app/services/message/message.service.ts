@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import 'rxjs/add/operator/retry';
 
+import { retry } from 'rxjs/operators';
 
 @Injectable()
 export class MessageService {
@@ -17,6 +17,9 @@ export class MessageService {
       content: content
     };
 
-    return this.http.post(`${this.origin}/message/`, body).retry(3);
+    return this.http.post(`${this.origin}/message/`, body)
+                    .pipe(
+                      retry(3)
+                    );
   }
 }
