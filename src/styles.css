@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "PaneuropaNeue";
+  src: url("./assets/fonts/PaneuropaNeueRegular.otf");
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -5,15 +10,15 @@ html, body {
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #575757;
-  background-color: #fbfbfb;
+  font-family: "PaneuropaNeue", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4b4e53;
+  background-color: #f5f3e6;
 }
 
 header, footer {
