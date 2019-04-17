@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, AsyncSubject } from 'rxjs';
-import { retry } from 'rxjs/operators';
+import { retry, map } from 'rxjs/operators';
 
 import { PostDetail, PostListItem } from '../../models/post.model';
 
@@ -9,7 +9,7 @@ import { PostDetail, PostListItem } from '../../models/post.model';
 @Injectable()
 export class BlogService {
 
-  private origin = 'https://dawidr.pythonanywhere.com/api';
+  private origin = 'http://localhost:8000/api';   // https://dawidr.pythonanywhere.com/api
 
   private postCache = new Map<string, Observable<PostDetail>>();
   private postsCache = new Map<number, Observable<PostListItem[]>>();
@@ -72,7 +72,7 @@ export class BlogService {
     this.http
       .get<PostListItem[]>(`${this.origin}/posts/`)
       .pipe(
-        retry(3)
+        retry(3),
       )
       .subscribe(subject);
     return subject.asObservable();
