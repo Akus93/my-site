@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AuthService {
 
-  private origin = 'https://dawidr.pythonanywhere.com/auth';
+  private origin = 'http://api.dawidr.pl/auth';
 
   constructor(private http: HttpClient) { }
 
