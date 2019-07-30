@@ -9,8 +9,8 @@ import {Router} from '@angular/router';
 })
 export class LoginComponent {
 
-  @ViewChild('login') login: ElementRef;
-  @ViewChild('password') password: ElementRef;
+  @ViewChild('login', { static: true }) login: ElementRef;
+  @ViewChild('password', { static: true }) password: ElementRef;
 
   constructor(private authService: AuthService, private router: Router) { }
 

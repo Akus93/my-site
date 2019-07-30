@@ -1,11 +1,12 @@
 import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 
-import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
+
 import { SubscriptionLike  } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 import { BlogService } from '../../../services/blog/blog.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { QuillEditorComponent } from 'ngx-quill';
 
 
 @Component({
@@ -15,8 +16,8 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class PostCreateComponent implements OnInit, OnDestroy {
 
-  @ViewChild('editor') editor: QuillEditorComponent;
-  @ViewChild('title') title: ElementRef;
+  @ViewChild('editor', { static: true }) editor: QuillEditorComponent;
+  @ViewChild('title', { static: true }) title: ElementRef;
   public editorHtml: string;
   public editorText: string;
   public editorSubscription: SubscriptionLike;

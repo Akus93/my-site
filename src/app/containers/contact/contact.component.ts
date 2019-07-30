@@ -10,7 +10,7 @@ import { MessageService } from '../../services/message/message.service';
 })
 export class ContactComponent {
 
-  @ViewChild('content') content: ElementRef;
+  @ViewChild('content', { static: true }) content: ElementRef;
 
   public formData = {
     name: '',

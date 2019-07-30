@@ -14,7 +14,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent, data: { state: 'contact' }},
   { path: 'projects', component: ProjectsComponent, data: { state: 'projects' }},
   { path: 'history', component: HistoryComponent, data: { state: 'history' }},
-  { path: 'admin', loadChildren: './admin/admin.module#AdminModule'},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
   { path: '', redirectTo: '/about', pathMatch: 'full'},
   { path: '**', redirectTo: '/about', pathMatch: 'full' }
 ];

@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 
 import { SubscriptionLike } from 'rxjs';
-import { QuillEditorComponent } from 'ngx-quill/src/quill-editor.component';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
+import { QuillEditorComponent } from 'ngx-quill';
 
 import { AuthService } from '../../services/auth/auth.service';
 import { BlogService } from '../../../services/blog/blog.service';
@@ -17,14 +17,17 @@ import { PostDetail} from '../../../models/post.model';
 })
 export class PostEditComponent implements OnInit, OnDestroy {
 
-  @ViewChild('editor') editor: QuillEditorComponent;
+  @ViewChild('editor', { static: true }) editor: QuillEditorComponent;
+  @ViewChild('title', { static: true }) title: ElementRef;
+
   public post: PostDetail;
-  private postSubscription: SubscriptionLike;
-  @ViewChild('title') title: ElementRef;
   public editorHtml: string;
   public editorText: string;
-  public editorSubscription: SubscriptionLike;
-  public editorConfig = {
+
+  private editorSubscription: SubscriptionLike;
+  private postSubscription: SubscriptionLike;
+
+  private readonly editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
@@ -37,8 +40,11 @@ export class PostEditComponent implements OnInit, OnDestroy {
     ]
   };
 
-  constructor(private route: ActivatedRoute, private blogService: BlogService,
-              private authService: AuthService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private blogService: BlogService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
     this.postSubscription =

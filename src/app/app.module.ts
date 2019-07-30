@@ -23,6 +23,7 @@ import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { MessageService } from './services/message/message.service';
+import { QuillModule } from 'ngx-quill';
 
 registerLocaleData(localePl);
 
@@ -46,7 +47,8 @@ registerLocaleData(localePl);
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    QuillModule.forRoot(),
   ],
   providers: [
     BlogService,
