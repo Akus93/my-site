@@ -24,10 +24,7 @@ export class PostEditComponent implements OnInit, OnDestroy {
   public editorHtml: string;
   public editorText: string;
 
-  private editorSubscription: SubscriptionLike;
-  private postSubscription: SubscriptionLike;
-
-  private readonly editorConfig = {
+  public readonly editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
@@ -39,6 +36,9 @@ export class PostEditComponent implements OnInit, OnDestroy {
       ['link', 'image', 'video'],
     ]
   };
+
+  private editorSubscription: SubscriptionLike;
+  private postSubscription: SubscriptionLike;
 
   constructor(
     private route: ActivatedRoute,
