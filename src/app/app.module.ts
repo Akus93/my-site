@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localePl from '@angular/common/locales/pl';
 
-import { routes } from './app.routes';
+import { QuillModule } from 'ngx-quill';
 
+import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { NavComponent } from './containers/nav/nav.component';
 import { AboutComponent } from './containers/about/about.component';
@@ -23,7 +24,7 @@ import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { MessageService } from './services/message/message.service';
-import { QuillModule } from 'ngx-quill';
+
 
 registerLocaleData(localePl);
 
@@ -45,6 +46,7 @@ registerLocaleData(localePl);
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),

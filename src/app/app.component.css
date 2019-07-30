@@ -1,18 +1,8 @@
-.logo {
-  position: relative;
-  display: block;
-  left: 50%;
-  width: 160px;
-  height: 160px;
-  margin-left: -80px;
-}
-
 .containter {
   position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1199px) {

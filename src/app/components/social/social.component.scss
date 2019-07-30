@@ -1,0 +1,28 @@
+.social {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+
+  &__icon {
+    opacity: 0.6;
+    width: 38px;
+    height: 38px;
+    margin: 2px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    padding: 6px;
+    transition: opacity 0.5s linear;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1164px) {
+  .social {
+    position: relative;
+    float: right;
+  }
+}

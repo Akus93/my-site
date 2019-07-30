@@ -9,9 +9,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 export class LoaderComponent implements OnInit, OnDestroy {
 
   public longLoad = false;
-  private longLoadTimeoutId: any;
 
-  constructor() {}
+  private longLoadTimeoutId: any;
 
   ngOnInit() {
     this.longLoadTimeoutId = setTimeout(() => {

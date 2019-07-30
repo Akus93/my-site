@@ -1,14 +1,10 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
-  styleUrls: ['./social.component.css']
+  styleUrls: ['./social.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SocialComponent {
-
-  constructor(private cd: ChangeDetectorRef) {
-    cd.detach();
-  }
-}
+export class SocialComponent {}

@@ -1,0 +1,23 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  height: 36px;
+  border-bottom: 1px #eee solid;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    margin-right: 32px;
+    color: #999;
+    font-size: 1.4em;
+  }
+
+  li {
+    display: inline-block;
+    text-align: match-parent;
+  }
+
+  .active {
+    color: #666 !important;
+  }
+}

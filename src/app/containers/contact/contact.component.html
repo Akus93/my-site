@@ -1,20 +1,14 @@
 <div class="router-container">
-  <form class="contact-form" (ngSubmit)="send()" #contactForm="ngForm">
+  <form novalidate class="contact-form" (ngSubmit)="send()" [formGroup]="contactForm">
     <div class="contact-form-row">
-      <input [(ngModel)]="formData.name" name="name" required placeholder="Imię i nazwisko">
-      <input [(ngModel)]="formData.email" name="email" type="email" required placeholder="Adres email">
+      <input formControlName="name" name="name" placeholder="Imię i nazwisko">
+      <input formControlName="email" name="email" placeholder="Adres email">
     </div>
     <div class="contact-form-row">
-        <textarea [(ngModel)]="formData.content" name="content" required
-                  #content (input)="onTextareaInput()" placeholder="Treść wiadomości">
-        </textarea>
+      <textarea class="form__content" formControlName="content" name="content" placeholder="Treść wiadomości"></textarea>
     </div>
     <div class="contact-form-row">
-      <button type="submit" class="contact-form-submit" [disabled]="!contactForm.form.valid">Wyślij</button>
+      <button type="submit" class="contact-form-submit" [disabled]="!contactForm.valid">Wyślij</button>
     </div>
   </form>
-
-  <div class="social-wrapper-inside">
-    <app-social></app-social>
-  </div>
 </div>

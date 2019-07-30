@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { MessageService } from '../../services/message/message.service';
 
@@ -8,29 +9,33 @@ import { MessageService } from '../../services/message/message.service';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
 
-  @ViewChild('content', { static: true }) content: ElementRef;
+  public contactForm: FormGroup;
 
-  public formData = {
-    name: '',
-    email: '',
-    content: ''
-  };
+  constructor(
+    private messageService: MessageService,
+    private formBuilder: FormBuilder,
+  ) {}
 
-  constructor(private renderer: Renderer2, private messageService: MessageService) {}
+  ngOnInit(): void {
+    this.buildContactForm();
+  }
 
-  public onTextareaInput() {
-    const scrollHeight = this.content.nativeElement.scrollHeight;
-    this.renderer.setStyle(this.content.nativeElement, 'height', `${scrollHeight}px`);
+  private buildContactForm(): void {
+    this.contactForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      content: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(2048)]],
+    });
   }
 
   public send() {
-    this.messageService.sendMessage(this.formData.name, this.formData.email, this.formData.content)
-      .subscribe(response => {
-        this.formData.content = '';
-        this.formData.name = '';
-        this.formData.email = '';
+    console.log(this.contactForm.value);
+    this.messageService.sendMessage(
+      this.contactForm.get('name').value, this.contactForm.get('email').value, this.contactForm.get('content').value
+    ).subscribe(response => {
+        this.contactForm.reset();
       },
       error => console.error(error)
     );
