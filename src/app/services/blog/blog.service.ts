@@ -9,7 +9,7 @@ import { PostDetail, PostListItem } from '../../models/post.model';
 @Injectable()
 export class BlogService {
 
-  private origin = 'http://localhost:8000/api';   // https://dawidr.pythonanywhere.com/api
+  private origin = 'http://api.dawidr.pl/api';
 
   private postCache = new Map<string, Observable<PostDetail>>();
   private postsCache = new Map<number, Observable<PostListItem[]>>();

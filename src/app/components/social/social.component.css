@@ -12,10 +12,14 @@
   border: 1px solid #999;
   margin: 2px;
   cursor: pointer;
+  filter: grayscale(0);
+  opacity: 0.6;
+  transition: opacity 0.5s linear;
 }
 
 .social-link img:hover {
-  border-color: #666;
+  /*border-color: #666;*/
+  opacity: 1;
 }
 
 @media screen and (max-width: 1164px) {

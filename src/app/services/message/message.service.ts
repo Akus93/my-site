@@ -6,7 +6,7 @@ import { retry } from 'rxjs/operators';
 @Injectable()
 export class MessageService {
 
-  private origin = 'https://dawidr.pythonanywhere.com/api';
+  private origin = 'http://api.dawidr.pl/api';
 
   constructor(private http: HttpClient) { }
 
