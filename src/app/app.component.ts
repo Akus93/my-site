@@ -1,6 +1,9 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ChangeDetectionStrategy, OnInit, Inject } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-import {routerTransition} from './animations/routerTransition.animation';
+import { routerTransition } from './animations/routerTransition.animation';
+import { schema } from './schema';
 
 
 @Component({
@@ -10,10 +13,23 @@ import {routerTransition} from './animations/routerTransition.animation';
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [ routerTransition ],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  getState(outlet) {
+  constructor(@Inject(DOCUMENT) private document: Document) { }
+
+  ngOnInit(): void {
+    this.addSchema();
+  }
+
+  public getOutletState(outlet: RouterOutlet) {
     return outlet.activatedRouteData.state;
+  }
+
+  private addSchema(): void {
+    const scriptTag = this.document.createElement('script');
+    scriptTag.type = 'application/ld+json';
+    scriptTag.innerHTML = JSON.stringify(schema, null, 2);
+    this.document.head.appendChild(scriptTag);
   }
 
 }

@@ -3,7 +3,7 @@
     <app-nav></app-nav>
   </nav>
 </header>
-<main class="containter" [@routerTransition]="getState(outlet)">
+<main class="containter" [@routerTransition]="getOutletState(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
 <div class="social-wrapper">
