@@ -8,5 +8,5 @@ import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SkillBarComponent {
-  @Input() value: number;
+  @Input() value!: number;
 }

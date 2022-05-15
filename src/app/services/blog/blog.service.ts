@@ -20,14 +20,14 @@ export class BlogService {
     if (!this.postsCache.has(page)) {
       this.postsCache.set(page, this.fetchPosts(page));
     }
-    return this.postsCache.get(page);
+    return this.postsCache.get(page)!;
   }
 
   public getPost(slug: string): Observable<PostDetail> {
     if (!this.postCache.has(slug)) {
       this.postCache.set(slug, this.fetchPost(slug));
     }
-    return this.postCache.get(slug);
+    return this.postCache.get(slug)!;
   }
 
   public addPost(token: string, title: string, content: string, description: string) {

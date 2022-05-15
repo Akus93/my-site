@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { BlogService } from '../services/blog/blog.service';
 import { PostListItem } from '../models/post.model';
@@ -9,9 +9,9 @@ import { PostListItem } from '../models/post.model';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit, OnDestroy {
+export class AdminComponent implements OnInit {
 
-  public posts: PostListItem[];
+  public posts: PostListItem[] = [];
 
   constructor(private blogService: BlogService) {}
 
@@ -20,7 +20,4 @@ export class AdminComponent implements OnInit, OnDestroy {
       posts => this.posts = posts
     );
   }
-
-  ngOnDestroy() {}
-
 }

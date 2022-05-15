@@ -16,9 +16,9 @@ import { PostDetail } from '../../models/post.model';
 })
 export class PostComponent implements OnInit, OnDestroy {
 
-  public post: PostDetail;
-  public content: SafeHtml;
-  private postSubscription: SubscriptionLike;
+  public post!: PostDetail;
+  public content!: SafeHtml;
+  private postSubscription!: SubscriptionLike;
 
   constructor(private route: ActivatedRoute, private sanitizer: DomSanitizer, private blogService: BlogService) {}
 

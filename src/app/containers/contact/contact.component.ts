@@ -11,7 +11,7 @@ import { MessageService } from '../../services/message/message.service';
 })
 export class ContactComponent implements OnInit {
 
-  public contactForm: FormGroup;
+  public contactForm!: FormGroup;
 
   constructor(
     private messageService: MessageService,
@@ -33,7 +33,7 @@ export class ContactComponent implements OnInit {
   public send() {
     console.log(this.contactForm.value);
     this.messageService.sendMessage(
-      this.contactForm.get('name').value, this.contactForm.get('email').value, this.contactForm.get('content').value
+      this.contactForm.get('name')!.value, this.contactForm.get('email')!.value, this.contactForm.get('content')!.value
     ).subscribe(response => {
         this.contactForm.reset();
       },

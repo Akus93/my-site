@@ -12,7 +12,7 @@ import { PostListItem } from '../../models/post.model';
 })
 export class BlogComponent implements OnInit {
 
-  public posts$: Observable<PostListItem[]>;
+  public posts$!: Observable<PostListItem[]>;
 
   constructor(private blogService: BlogService) {}
 

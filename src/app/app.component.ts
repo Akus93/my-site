@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   public getOutletState(outlet: RouterOutlet) {
-    return outlet.activatedRouteData.state;
+    return outlet.activatedRouteData['state'];
   }
 
   private addSchema(): void {

@@ -16,21 +16,27 @@ import { QuillEditorComponent } from 'ngx-quill';
 })
 export class PostCreateComponent implements OnInit, OnDestroy {
 
-  @ViewChild('editor', { static: true }) editor: QuillEditorComponent;
-  @ViewChild('title', { static: true }) title: ElementRef;
+  @ViewChild('editor', { static: true }) editor!: QuillEditorComponent;
+  @ViewChild('title', { static: true }) title!: ElementRef;
   public editorHtml: string;
   public editorText: string;
-  public editorSubscription: SubscriptionLike;
+  public editorSubscription!: SubscriptionLike;
   public editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
+      [{ 'header': 1 }, { 'header': 2 }],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      [{ 'script': 'sub'}, { 'script': 'super' }],
+      [{ 'indent': '-1'}, { 'indent': '+1' }],
+      [{ 'direction': 'rtl' }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
       [{ 'color': [] }, { 'background': [] }],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }, {'align': [false, 'center', 'right', 'justify']}],
-      [{ 'script': 'sub' }, { 'script': 'super' }],
-      [{ 'header': [1, 2, 3, false] }, {'font': []}],
+      [{ 'font': [] }],
+      [{ 'align': [] }],
       ['clean'],
-      ['link', 'image', 'video'],
+      ['link', 'image', 'video']
     ]
   };
 
@@ -47,7 +53,7 @@ export class PostCreateComponent implements OnInit, OnDestroy {
         distinctUntilChanged()
       )
       .subscribe(content => {
-          this.editorHtml = content.html;
+          this.editorHtml = content.html!;
           this.editorText = content.text;
         }
       );

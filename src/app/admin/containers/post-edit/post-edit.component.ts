@@ -17,28 +17,34 @@ import { PostDetail} from '../../../models/post.model';
 })
 export class PostEditComponent implements OnInit, OnDestroy {
 
-  @ViewChild('editor', { static: true }) editor: QuillEditorComponent;
-  @ViewChild('title', { static: true }) title: ElementRef;
+  @ViewChild('editor', { static: true }) editor!: QuillEditorComponent;
+  @ViewChild('title', { static: true }) title!: ElementRef;
 
-  public post: PostDetail;
-  public editorHtml: string;
-  public editorText: string;
+  public post!: PostDetail;
+  public editorHtml!: string;
+  public editorText!: string;
 
   public readonly editorConfig = {
     toolbar: [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
+      [{ 'header': 1 }, { 'header': 2 }],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      [{ 'script': 'sub'}, { 'script': 'super' }],
+      [{ 'indent': '-1'}, { 'indent': '+1' }],
+      [{ 'direction': 'rtl' }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
       [{ 'color': [] }, { 'background': [] }],
-      [{ 'list': 'ordered' }, { 'list': 'bullet' }, {'align': [false, 'center', 'right', 'justify']}],
-      [{ 'script': 'sub' }, { 'script': 'super' }],
-      [{ 'header': [1, 2, 3, false] }, {'font': []}],
+      [{ 'font': [] }],
+      [{ 'align': [] }],
       ['clean'],
-      ['link', 'image', 'video'],
+      ['link', 'image', 'video']
     ]
   };
 
-  private editorSubscription: SubscriptionLike;
-  private postSubscription: SubscriptionLike;
+  private editorSubscription!: SubscriptionLike;
+  private postSubscription!: SubscriptionLike;
 
   constructor(
     private route: ActivatedRoute,
@@ -63,7 +69,7 @@ export class PostEditComponent implements OnInit, OnDestroy {
         distinctUntilChanged()
       )
       .subscribe(content => {
-          this.editorHtml = content.html;
+          this.editorHtml = content.html!;
           this.editorText = content.text;
         }
       );
