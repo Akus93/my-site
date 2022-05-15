@@ -1,6 +1,7 @@
 @font-face {
   font-family: "PaneuropaNeue";
   src: url("./assets/fonts/PaneuropaNeueRegular.otf");
+  font-display: swap;
 }
 
 * {
