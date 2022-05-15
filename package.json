@@ -21,9 +21,9 @@
     "@angular/platform-browser": "9.1.13",
     "@angular/platform-browser-dynamic": "9.1.13",
     "@angular/router": "9.1.13",
-    "core-js": "2.6.0",
-    "ngx-quill": "7.1.2",
-    "quill": "^1.3.6",
+    "core-js": "3.22.5",
+    "ngx-quill": "12.0.1",
+    "quill": "1.3.7",
     "rxjs": "6.6.7",
     "zone.js": "0.10.3"
   },
