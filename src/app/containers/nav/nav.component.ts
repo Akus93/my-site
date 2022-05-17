@@ -7,4 +7,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent {}
+export class NavComponent { }

@@ -1,14 +1,8 @@
-@font-face {
-  font-family: "PaneuropaNeue";
-  src: url("./assets/fonts/PaneuropaNeueRegular.otf");
-  font-display: swap;
-}
-
 * {
   box-sizing: border-box;
   scrollbar-width: none;
   outline: none !important;
-  font-family: "PaneuropaNeue", "HelveticaNeue", Arial, sans-serif;
+  font-family: 'Spectral', serif;
 }
 
 ::-webkit-scrollbar {
@@ -23,7 +17,7 @@ body {
 }
 
 html {
-  font-size: 17px;
+  font-size: 14px;
 }
 
 body {

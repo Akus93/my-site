@@ -1,30 +1,26 @@
 .timeline {
   color: #ffffff;
   font-weight: 600;
-}
 
-.timeline ul li {
-  list-style-type: none;
-  position: relative;
-  width: 2px;
-  margin: 0 auto;
-  padding-top: 30px;
-  background: #6f6f6f;
-}
+  ul {
+    li {
+      list-style-type: none;
+      position: relative;
+      width: 2px;
+      margin: 0 auto;
+      padding-top: 30px;
+      background: #6f6f6f;
 
-@media screen and (max-width: 700px) {
-  .timeline ul li {
-    margin: 0;
+      div {
+        position: relative;
+        bottom: 0;
+        width: 250px;
+        padding: 12px 18px;
+        color: #6f6f6f;
+        border-bottom: 2px solid #6f6f6f;
+      }
+    }
   }
-}
-
-.timeline ul li div {
-  position: relative;
-  bottom: 0;
-  width: 250px;
-  padding: 12px 18px;
-  color: #6f6f6f;
-  border-bottom: 2px solid #6f6f6f;
 }
 
 .timeline ul li:nth-child(odd) div::before {
@@ -37,12 +33,6 @@
 
 .timeline ul li:nth-child(even) div {
   left: -285px;
-}
-
-@media screen and (max-width: 700px) {
-  .timeline ul li:nth-child(even) div {
-    left: auto;
-  }
 }
 
 .timeline ul li:nth-child(even) div::before {
@@ -63,4 +53,14 @@ time {
   transition: background .5s ease-in-out;
   background: #0094FF;
   top: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .timeline ul li {
+    margin: 0;
+  }
+
+  .timeline ul li:nth-child(even) div {
+    left: auto;
+  }
 }

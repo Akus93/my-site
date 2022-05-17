@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './containers/nav/nav.component';
 import { AboutComponent } from './containers/about/about.component';
 import { HistoryComponent } from './containers/history/history.component';
-import { FooterComponent } from './containers/footer/footer.component';
 import { BlogComponent } from './containers/blog/blog.component';
 import { ProjectsComponent } from './containers/projects/projects.component';
 import { ContactComponent } from './containers/contact/contact.component';
@@ -34,7 +33,6 @@ registerLocaleData(localePl);
     NavComponent,
     AboutComponent,
     HistoryComponent,
-    FooterComponent,
     BlogComponent,
     ProjectsComponent,
     ContactComponent,
