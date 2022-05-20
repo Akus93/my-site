@@ -1,252 +1,248 @@
-<div class="router-container">
-  <div class="personal-info">
-    <section>
-      <img class="personal-info-image" src="assets/images/profile.jpg" alt="Dawid Rdzanek"/>
-      <h2 class="personal-info-header">MOJE DANE</h2>
-      <div class="heading-line"></div>
-      <div class="personal-info-content">
-          <span>
-            <strong>Imię i nazwisko:</strong>
-            <br>
-            Dawid Rdzanek
-          </span>
-        <span>
-            <strong>Email:</strong>
-            <br>
-            dawid.rdzanek@protonmail.com
-          </span>
-        <span>
-            <strong>Wiek:</strong>
-            <br>
-            28
-          </span>
-        <span>
-            <strong>Lokalizacja:</strong>
-            <br>
-            Poznań, Polska
-          </span>
-      </div>
-    </section>
+<section class="me">
+  <img src="assets/images/profile.jpg" alt="Dawid Rdzanek"/>
+  <h2>MOJE DANE</h2>
+  <div class="line"></div>
+  <div class="info">
+    <div>
+      <strong>Imię i nazwisko:</strong>
+      <br>
+      Dawid Rdzanek
+    </div>
+    <div>
+      <strong>Email:</strong>
+      <br>
+      <a href="mailto:dawid.rdzanek@protonmail.com">dawid.rdzanek@protonmail.com</a>
+    </div>
+    <div>
+      <strong>Wiek:</strong>
+      <br>
+      28
+    </div>
+    <address>
+      <strong>Lokalizacja:</strong>
+      <br>
+      Poznań, Polska
+    </address>
   </div>
+</section>
 
-  <div class="about-me">
-    <section>
-      <h2 class="about-me-title">Dawid Rdzanek</h2>
-      <h3 class="about-me-subtitle">Web developer</h3>
-      <h2>Umiejętności</h2>
+<div class="about-me">
+  <section>
+    <h2 class="about-me-title">Dawid Rdzanek</h2>
+    <h3 class="about-me-subtitle">Web developer</h3>
+    <h2>Umiejętności</h2>
 
-      <ul class="skills">
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.djangoproject.com/">
-              <img src="assets/images/logos/django.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="75"></app-skill-bar>
-            </div>
+    <ul class="skills">
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.djangoproject.com/">
+            <img src="assets/images/logos/django.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="75"></app-skill-bar>
           </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://angular.io/">
-              <img src="assets/images/logos/angular.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="80"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="http://ionicframework.com/">
-              <img src="assets/images/logos/ionic.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="50"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="http://flask.pocoo.org/">
-              <img src="assets/images/logos/flask.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="55"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.w3.org/TR/html5/">
-              <img src="assets/images/logos/html5.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="85"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.w3.org/TR/2014/WD-css-display-3-20140911/">
-              <img src="assets/images/logos/css3.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="75"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.python.org/">
-              <img src="assets/images/logos/python.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="80"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.typescriptlang.org/">
-              <img src="assets/images/logos/ts.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="75"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://nodejs.org">
-              <img src="assets/images/logos/node-js.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="45"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://git-scm.com/">
-              <img src="assets/images/logos/git.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="80"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.postgresql.org/">
-              <img src="assets/images/logos/psql.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="65"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="skill-wrapper">
-            <a href="https://www.kernel.org/">
-              <img src="assets/images/logos/linux.png">
-            </a>
-            <div class="skill-bar">
-              <app-skill-bar [value]="75"></app-skill-bar>
-            </div>
-          </div>
-        </li>
-      </ul>
-      <div class="cv-info">*wiecej informacji w CV, link na dole strony</div>
-
-      <h2>Doświadczenie</h2>
-
-      <div class="experience-box">
-        <div class="experience-title">
-          <div class="experience-title-name">Merixstudio</div>
-          <div class="experience-title-time">kwi 2018 - obecnie</div>
         </div>
-        <div class="experience-info">
-          <ul>
-            <li>Regular Python Developer</li>
-            <li>Back-end w Django</li>
-            <li>Deploy na AWS</li>
-            <li>Elasticsearch, Redis, Celery, Crossbar.io</li>
-          </ul>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://angular.io/">
+            <img src="assets/images/logos/angular.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="80"></app-skill-bar>
+          </div>
         </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="http://ionicframework.com/">
+            <img src="assets/images/logos/ionic.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="50"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="http://flask.pocoo.org/">
+            <img src="assets/images/logos/flask.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="55"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.w3.org/TR/html5/">
+            <img src="assets/images/logos/html5.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="85"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.w3.org/TR/2014/WD-css-display-3-20140911/">
+            <img src="assets/images/logos/css3.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="75"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.python.org/">
+            <img src="assets/images/logos/python.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="80"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.typescriptlang.org/">
+            <img src="assets/images/logos/ts.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="75"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://nodejs.org">
+            <img src="assets/images/logos/node-js.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="45"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://git-scm.com/">
+            <img src="assets/images/logos/git.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="80"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.postgresql.org/">
+            <img src="assets/images/logos/psql.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="65"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="skill-wrapper">
+          <a href="https://www.kernel.org/">
+            <img src="assets/images/logos/linux.png">
+          </a>
+          <div class="skill-bar">
+            <app-skill-bar [value]="75"></app-skill-bar>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="cv-info">*wiecej informacji w CV, link na dole strony</div>
+
+    <h2>Doświadczenie</h2>
+
+    <div class="experience-box">
+      <div class="experience-title">
+        <div class="experience-title-name">Merixstudio</div>
+        <div class="experience-title-time">kwi 2018 - obecnie</div>
       </div>
-
-      <div class="experience-box">
-        <div class="experience-title">
-          <div class="experience-title-name">1CONNECT</div>
-          <div class="experience-title-time">cze 2017 - kwi 2018</div>
-        </div>
-        <div class="experience-info">
-          <ul>
-            <li>Programista front-end/mobile</li>
-            <li>Aplikacje internetowe w Angular 4</li>
-            <li>Aplikacje mobilne w Ionic 3</li>
-            <li>100% zdalnie</li>
-          </ul>
-        </div>
+      <div class="experience-info">
+        <ul>
+          <li>Regular Python Developer</li>
+          <li>Back-end w Django</li>
+          <li>Deploy na AWS</li>
+          <li>Elasticsearch, Redis, Celery, Crossbar.io</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="experience-box">
-        <div class="experience-title">
-          <div class="experience-title-name">Freelancer</div>
-          <div class="experience-title-time">paź 2016 - obecnie</div>
-        </div>
-        <div class="experience-info">
-          <ul>
-            <li>Full stack developer</li>
-            <li>Aplikacje internetowe w Django</li>
-            <li>Wdrażanie na serwery produkcyjne</li>
-          </ul>
-        </div>
+    <div class="experience-box">
+      <div class="experience-title">
+        <div class="experience-title-name">1CONNECT</div>
+        <div class="experience-title-time">cze 2017 - kwi 2018</div>
       </div>
-
-      <div class="experience-box">
-        <div class="experience-title">
-          <div class="experience-title-name">Huevo</div>
-          <div class="experience-title-time">maj 2015 - lip 2015</div>
-        </div>
-        <div class="experience-info">
-          <ul>
-            <li>PHP intern developer</li>
-            <li>Aplikacje internetowe w Symfony</li>
-            <li>Rozwój i utrzymanie aplikacji napisanych w PHP</li>
-          </ul>
-        </div>
+      <div class="experience-info">
+        <ul>
+          <li>Programista front-end/mobile</li>
+          <li>Aplikacje internetowe w Angular 4</li>
+          <li>Aplikacje mobilne w Ionic 3</li>
+          <li>100% zdalnie</li>
+        </ul>
       </div>
+    </div>
 
-      <h2>Wykształcenie</h2>
-
-      <div class="education-box">
-        <div class="education-time">
-          <time>2017 - 2018</time>
-        </div>
-        <div class="education-info">
-          Politechnika Poznańska, Informatyka - magister
-        </div>
+    <div class="experience-box">
+      <div class="experience-title">
+        <div class="experience-title-name">Freelancer</div>
+        <div class="experience-title-time">paź 2016 - obecnie</div>
       </div>
-
-      <div class="education-box">
-        <div class="education-time">
-          <time>2013 - 2017</time>
-        </div>
-        <div class="education-info">
-          Politechnika Poznańska, Informatyka - inżynier
-        </div>
+      <div class="experience-info">
+        <ul>
+          <li>Full stack developer</li>
+          <li>Aplikacje internetowe w Django</li>
+          <li>Wdrażanie na serwery produkcyjne</li>
+        </ul>
       </div>
+    </div>
 
-      <div class="education-box">
-        <div class="education-time">
-          <time>2009 – 2013</time>
-        </div>
-        <div class="education-info">
-          Zespół Szkół nr 3 w Ostrowcu Św. - technik informatyk
-        </div>
+    <div class="experience-box">
+      <div class="experience-title">
+        <div class="experience-title-name">Huevo</div>
+        <div class="experience-title-time">maj 2015 - lip 2015</div>
       </div>
-    </section>
-  </div>
+      <div class="experience-info">
+        <ul>
+          <li>PHP intern developer</li>
+          <li>Aplikacje internetowe w Symfony</li>
+          <li>Rozwój i utrzymanie aplikacji napisanych w PHP</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Wykształcenie</h2>
+
+    <div class="education-box">
+      <div class="education-time">
+        <time>2017 - 2018</time>
+      </div>
+      <div class="education-info">
+        Politechnika Poznańska, Informatyka - magister
+      </div>
+    </div>
+
+    <div class="education-box">
+      <div class="education-time">
+        <time>2013 - 2017</time>
+      </div>
+      <div class="education-info">
+        Politechnika Poznańska, Informatyka - inżynier
+      </div>
+    </div>
+
+    <div class="education-box">
+      <div class="education-time">
+        <time>2009 – 2013</time>
+      </div>
+      <div class="education-info">
+        Zespół Szkół nr 3 w Ostrowcu Św. - technik informatyk
+      </div>
+    </div>
+  </section>
 </div>

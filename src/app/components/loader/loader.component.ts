@@ -1,25 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 
 @Component({
   selector: 'app-loader',
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoaderComponent implements OnInit, OnDestroy {
-
-  public longLoad = false;
-
-  private longLoadTimeoutId: any;
-
-  ngOnInit() {
-    this.longLoadTimeoutId = setTimeout(() => {
-      this.longLoad = true;
-    }, 4000);
-  }
-
-  ngOnDestroy() {
-    clearTimeout(this.longLoadTimeoutId);
-  }
-
-}
+export class LoaderComponent { }
