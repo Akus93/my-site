@@ -304,3 +304,12 @@
   font-style: italic;
 }
 
+app-social {
+  margin: 0 auto;
+}
+
+@media (min-width: calc(960px + (126px + 30px + 6px) * 2)) {
+  app-social {
+    display: none;
+  }
+}

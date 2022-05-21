@@ -4,12 +4,22 @@
   align-items: center;
 }
 
+header {
+  width: 100%;
+}
+
 main {
   width: 100%;
   max-width: 960px;
 }
 
-@media screen and (max-width: 800px) {
+app-social {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+}
+
+@media (max-width: calc(960px + (126px + 30px + 6px) * 2)) {
   app-social {
     display: none;
   }
