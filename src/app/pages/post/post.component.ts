@@ -10,11 +10,11 @@ import { PostDetail } from '../../models/post.model';
 
 
 @Component({
-  selector: 'app-post',
+  selector: 'app-post-page',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit, OnDestroy {
+export class PostPageComponent implements OnInit, OnDestroy {
 
   public post!: PostDetail;
   public content!: SafeHtml;

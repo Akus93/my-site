@@ -1,19 +1,17 @@
 import {Routes} from '@angular/router';
-import {AboutComponent} from './containers/about/about.component';
-import {HistoryComponent} from './containers/history/history.component';
-import {BlogComponent} from './containers/blog/blog.component';
-import {ProjectsComponent} from './containers/projects/projects.component';
-import {ContactComponent} from './containers/contact/contact.component';
-import {PostComponent} from './containers/post/post.component';
+import {AboutPageComponent} from './pages/about/about.component';
+import {BlogPageComponent} from './pages/blog/blog.component';
+import {ProjectsPageComponent} from './pages/projects/projects.component';
+import {ContactPageComponent} from './pages/contact/contact.component';
+import {PostPageComponent} from './pages/post/post.component';
 
 
 export const routes: Routes = [
-  { path: 'about', component: AboutComponent, data: { state: 'about' }},
-  { path: 'blog', component: BlogComponent, data: { state: 'blog' }},
-  { path: 'post/:slug', component: PostComponent, data: { state: 'post' }},
-  { path: 'contact', component: ContactComponent, data: { state: 'contact' }},
-  { path: 'projects', component: ProjectsComponent, data: { state: 'projects' }},
-  { path: 'history', component: HistoryComponent, data: { state: 'history' }},
+  { path: 'about', component: AboutPageComponent, data: { state: 'about' }},
+  { path: 'blog', component: BlogPageComponent, data: { state: 'blog' }},
+  { path: 'post/:slug', component: PostPageComponent, data: { state: 'post' }},
+  { path: 'contact', component: ContactPageComponent, data: { state: 'contact' }},
+  { path: 'projects', component: ProjectsPageComponent, data: { state: 'projects' }},
   { path: '', redirectTo: '/about', pathMatch: 'full'},
   { path: '**', redirectTo: '/about', pathMatch: 'full' }
 ];

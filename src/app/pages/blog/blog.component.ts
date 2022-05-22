@@ -6,11 +6,11 @@ import { PostListItem } from '../../models/post.model';
 
 
 @Component({
-  selector: 'app-blog',
+  selector: 'app-blog-page',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogPageComponent implements OnInit {
 
   public posts$!: Observable<PostListItem[]>;
 

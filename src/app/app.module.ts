@@ -7,13 +7,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
-import { NavComponent } from './containers/nav/nav.component';
-import { AboutComponent } from './containers/about/about.component';
-import { HistoryComponent } from './containers/history/history.component';
-import { BlogComponent } from './containers/blog/blog.component';
-import { ProjectsComponent } from './containers/projects/projects.component';
-import { ContactComponent } from './containers/contact/contact.component';
-import { PostComponent } from './containers/post/post.component';
+import { NavComponent } from './components/nav/nav.component';
+import { AboutPageComponent } from './pages/about/about.component';
+import { BlogPageComponent } from './pages/blog/blog.component';
+import { ProjectsPageComponent } from './pages/projects/projects.component';
+import { ContactPageComponent } from './pages/contact/contact.component';
+import { PostPageComponent } from './pages/post/post.component';
 import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
@@ -23,12 +22,11 @@ import { LoaderComponent } from './components/loader/loader.component';
   declarations: [
     AppComponent,
     NavComponent,
-    AboutComponent,
-    HistoryComponent,
-    BlogComponent,
-    ProjectsComponent,
-    ContactComponent,
-    PostComponent,
+    AboutPageComponent,
+    BlogPageComponent,
+    ProjectsPageComponent,
+    ContactPageComponent,
+    PostPageComponent,
     SocialComponent,
     SkillBarComponent,
     LoaderComponent

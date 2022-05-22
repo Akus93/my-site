@@ -5,11 +5,11 @@ import { MessageService } from '../../services/message/message.service';
 
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-contact-page',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactPageComponent implements OnInit {
 
   public contactForm!: FormGroup;
 
