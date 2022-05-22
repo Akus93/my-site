@@ -61,39 +61,24 @@
 }
 
 .about-me {
-  display: inline-block;
   width: 70%;
   padding: 10px;
   box-sizing: border-box;
+
+  h2 {
+    font-size: 1.6em;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
 }
 
 @media (max-width: 800px) {
-  .personal-info {
-    display: block;
-    width: 100%;
-    float: none;
-  }
-
   .about-me {
-    display: block;
     width: 100%;
   }
 }
 
-.about-me-title {
-  font-size: 1.7rem;
-  text-transform: uppercase;
-  border-bottom: 2px #5d5d5d solid;
-  display: inline-block;
-  margin: 0 0 6px 0;
-}
-
-.about-me-subtitle {
-  font-weight: 200;
-  font-size: 1.1rem;
-  margin: 0 auto;
-  text-transform: uppercase;
-}
 
 .skill-box {
   width: 150px;
