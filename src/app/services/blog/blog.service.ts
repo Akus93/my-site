@@ -6,7 +6,7 @@ import { retry, map } from 'rxjs/operators';
 import { PostDetail, PostListItem } from '../../models/post.model';
 
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class BlogService {
 
   private origin = 'http://api.dawidr.pl/api';
@@ -28,32 +28,6 @@ export class BlogService {
       this.postCache.set(slug, this.fetchPost(slug));
     }
     return this.postCache.get(slug)!;
-  }
-
-  public addPost(token: string, title: string, content: string, description: string) {
-    const body = {
-      title: title,
-      content: content,
-      description: description
-    };
-    const options = {
-      headers: new HttpHeaders().set('Authorization', 'Token ' + token)
-    };
-
-    return this.http.post(`${this.origin}/posts/`, body, options);
-  }
-
-  public editPost(token: string, slug: string, title: string, content: string, description: string) {
-    const body = {
-      title: title,
-      content: content,
-      description: description
-    };
-    const options = {
-      headers: new HttpHeaders().set('Authorization', 'Token ' + token)
-    };
-
-    return this.http.patch(`${this.origin}/posts/${slug}/`, body, options);
   }
 
   private fetchPost(slug: string): Observable<PostDetail> {

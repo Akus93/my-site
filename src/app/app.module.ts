@@ -4,10 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { registerLocaleData } from '@angular/common';
-import localePl from '@angular/common/locales/pl';
-
-import { QuillModule } from 'ngx-quill';
 
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
@@ -18,14 +14,10 @@ import { BlogComponent } from './containers/blog/blog.component';
 import { ProjectsComponent } from './containers/projects/projects.component';
 import { ContactComponent } from './containers/contact/contact.component';
 import { PostComponent } from './containers/post/post.component';
-import { BlogService } from './services/blog/blog.service';
 import { SocialComponent } from './components/social/social.component';
 import { SkillBarComponent } from './components/skill-bar/skill-bar.component';
 import { LoaderComponent } from './components/loader/loader.component';
-import { MessageService } from './services/message/message.service';
 
-
-registerLocaleData(localePl);
 
 @NgModule({
   declarations: [
@@ -48,11 +40,6 @@ registerLocaleData(localePl);
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    QuillModule.forRoot(),
-  ],
-  providers: [
-    BlogService,
-    MessageService
   ],
   bootstrap: [AppComponent]
 })

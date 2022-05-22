@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { retry } from 'rxjs/operators';
 
-@Injectable()
+
+@Injectable({ providedIn: 'root' })
 export class MessageService {
 
   private origin = 'http://api.dawidr.pl/api';

@@ -1,8 +1,0 @@
-<div class="router-container">
-  <button class="create-button" routerLink="/admin/create">Dodaj post</button>
-  <ul>
-    <li *ngFor="let post of posts">
-      <a [routerLink]="['/admin/edit', post.slug]">{{post.title}}</a>
-    </li>
-  </ul>
-</div>
